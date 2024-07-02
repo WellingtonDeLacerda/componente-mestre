@@ -1,0 +1,171 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial,sans-serif;
+}
+:root{
+   /*  ## Colors */
+
+--Azul-acinzentado-muito-escuro: hsl(217, 19%, 35%);
+--Azul-Escuro-Dessaturado: hsl(214, 17%, 51%);
+--Azul-acinzentado: hsl(212, 23%, 69%);
+--Azul-Acinzentado-Claro: hsl(210, 46%, 95%);
+
+/* ## Typography */
+/* ### Body Copy */
+
+--Font-size: 13px;
+
+/* ### Headings */
+
+--Family: [Manrope](https://fonts.google.com/specimen/Manrope);
+--Weights: 500, 700;
+
+/* ## Icons */
+
+/* Fornecemos SVGs para os ícones sociais. Mas sinta-se à vontade para usar uma biblioteca de ícones de fontes, se desejar. Algumas sugestões podem ser encontradas abaixo: */
+
+--[Font Awesome](https://fontawesome.com);
+--[IcoMoon](https://icomoon.io);
+--[Ionicons](https://ionicons.com);
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--Azul-Acinzentado-Claro);
+    font-size: var(--Font-size);
+}
+h3{
+    line-height: 20px;
+    font-size: 1.3em;
+}
+h4,h3{
+    color: var(--Azul-acinzentado-muito-escuro);
+}
+section.seção_one{
+    display: flex;
+    flex-flow: column;   
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    transition-duration: .5s;
+}
+section.seção_one img.fundo{
+    height: 200px;
+    min-width:270px ;
+    max-width:380px ;
+    border-radius:10px 10px 0px 0px ;
+    transition-duration: 0.5s;
+}
+
+section.seção_two{
+    padding: 30px 30px 0px 30px;
+    min-width: 270px;
+    max-width: 380px;
+}
+section.seção_two p#p{
+    margin: 10px 0px;
+    line-height: 20px;
+    color: var(--Azul-Escuro-Dessaturado);
+    width: 248px;
+}
+section.seção_one section.seção_two div.michelle{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    
+}
+section.seção_one section.seção_two div.michelle span.icon_share{
+    border-radius: 20px;
+    background: url('images/icon-share.svg') no-repeat ;
+    background-position:center center ;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--Azul-Acinzentado-Claro) ;
+}
+section.seção_one section.seção_two div.michelle div.flex-row{
+    display: flex;
+    align-items: center;
+}
+section.seção_one section.seção_two div.michelle div.flex-row div p{
+    line-height: 20px;
+    color: var(--Azul-Escuro-Dessaturado);
+}
+section.seção_one section.seção_two div.michelle div.flex-row img.fot{
+    border-radius: 20px;
+    margin-right: 20px;
+}
+div.icons{
+    display: none;
+    padding: 20px 30px;
+    align-items: center;
+    
+    background-color:var(--Azul-acinzentado-muito-escuro) ;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: space-between;
+}
+div.icons div.flex{
+    display: flex;
+    gap:1rem;
+}
+div.icons div.flex p{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: var(--Azul-Escuro-Dessaturado);
+}
+section.seção_one span.share{
+    border-radius: 20px;
+    background: url('images/icon-share-2.svg') no-repeat ;
+    background-position:center center ;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--Azul-Escuro-Dessaturado) ;
+    
+  
+}
+@media screen and (min-width:768px){
+    
+    section.seção_one{
+        display: flex;
+        flex-flow: row;
+       
+    }
+    section.seção_two{
+        margin: 0px 10px;
+    }
+    section.seção_one img.fundo{
+        border-radius: 10px 0px 0px 10px;
+        height: 250px;
+    }
+    section.seção_two p#p{
+        width: 332px;
+    }
+    div.icons{
+        position: absolute;
+        left: 63%;
+        top: 48%;
+        border-radius: 10px;
+        padding: 15px 30px;
+    }
+    div.icons::after{
+        content: "";
+        position: absolute;
+        top: 49px;
+        left: 105px;
+        background-color: var(--Azul-acinzentado-muito-escuro);
+        width: 15px;
+        height: 15px;
+        border-radius: 0px 0px 100% 100%;
+    }
+}
